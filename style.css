@@ -1,0 +1,335 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Variables                                 */
+/* -------------------------------------------------------------------------- */
+
+:root {
+	--primary-color: #54e6af;
+	--primary-color-light: #b3ffe2;
+	--text-color-light: #c2cbe5;
+	--text-color-darker: #5a668a;
+	--background-color: #121725;
+	--background-color-dimmed: rgba(18, 23, 37, 0.9);
+	--dark-grey: #2c344b;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Reset                                   */
+/* -------------------------------------------------------------------------- */
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	padding: 2.4rem;
+	background-image: linear-gradient(
+			var(--background-color-dimmed),
+			var(--background-color-dimmed)
+		),
+		url(./assets/mobile/image-host.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	font-family: 'Chivo', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Mobile first                                */
+/* -------------------------------------------------------------------------- */
+
+.logoBox {
+	margin: 5rem 0;
+	text-align: center;
+}
+
+.main__header {
+	text-align: center;
+}
+
+.main__title {
+	font-size: 2.6rem;
+	line-height: 3.8rem;
+	font-weight: 100;
+	font-style: normal;
+	color: var(--primary-color);
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+}
+
+.main__title > span {
+	color: var(--text-color-light);
+}
+
+.main__content {
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	font-weight: 300;
+	color: var(--text-color-light);
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.main__iconsList {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 4rem;
+}
+
+.main__iconsListItem > img {
+	height: 1.4rem;
+}
+
+.main__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.main__form input {
+	background-color: var(--dark-grey);
+	padding: 1.5rem 0 1.5rem 3rem;
+	border: none;
+	color: var(--text-color-light);
+	font-size: 1.5rem;
+	border-radius: 2.8rem;
+	margin-bottom: 2rem;
+}
+
+.main__form input:focus {
+	outline: none;
+	color: var(--text-color-light);
+}
+
+.main__form input:focus:invalid,
+.main__form input:invalid {
+	box-shadow: none;
+}
+
+.main__form button {
+	background-color: var(--primary-color);
+	padding: 1.5rem;
+	border-radius: 2.8rem;
+	border: none;
+	font-weight: 700;
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.main__form button:hover {
+	background-color: var(--primary-color-light);
+}
+
+.error {
+	color: red;
+	position: relative;
+	top: 1rem;
+	left: 2rem;
+	font-size: 1.2rem;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.footer {
+	display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          Ipad portrait breakpoint                          */
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 48em) {
+	body {
+		background-image: url(./assets/tablet/image-host.jpg);
+		background-size: 52vh;
+		background-color: var(--background-color);
+		background-position: top right;
+	}
+
+	.logoBox {
+		margin: 2rem 0 0 2rem;
+		text-align: left;
+	}
+	.main {
+		background-color: var(--background-color);
+		margin-top: 16rem;
+		padding: 8rem 2rem;
+		width: 87%;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	.main__title {
+		font-size: 4.8rem;
+		line-height: 5.6rem;
+	}
+
+	.main__title > span {
+		display: block;
+	}
+
+	.main__header {
+		text-align: left;
+		width: 100%;
+	}
+
+	.main__content {
+		text-align: left;
+		width: 70%;
+		font-size: 1.8rem;
+	}
+
+	.main__icons {
+		margin-top: 5rem;
+		order: 2;
+		width: 80%;
+	}
+
+	.main__iconsList {
+		justify-content: space-between;
+		margin: 0;
+		text-align: left;
+		margin-top: 1rem;
+	}
+
+	.main__iconsListItem > img {
+		height: 2rem;
+	}
+
+	.main__form {
+		width: 100%;
+		margin-top: 1rem;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.main__form input[type='email'] {
+		padding: 0;
+		color: var(--text-color-light);
+		margin: 0;
+		width: 70%;
+		padding: 1.8rem;
+		padding-left: 3rem;
+	}
+
+	.main__form button {
+		padding: 1rem 3rem;
+		height: 5rem;
+		margin-left: -180px;
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 0;
+		display: block;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/*                       ipad landscape breakpoint 1024                       */
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 64em) {
+	body {
+		background-image: url(./assets/desktop/image-host.jpg);
+		background-size: 70rem;
+		background-position-y: 8rem;
+	}
+
+	.logoBox {
+		margin: 2rem 0 0rem 2rem;
+		text-align: left;
+	}
+
+	.main {
+		background-color: var(--background-color);
+		margin-top: 5rem;
+		padding: 5rem 2rem 0 2rem;
+		width: 63vw;
+	}
+
+	.main__content {
+		margin-bottom: 2rem;
+	}
+
+	.main__icons {
+		margin-top: 2rem;
+	}
+
+	.main__iconsList {
+		width: 80%;
+		padding-bottom: 3rem;
+	}
+
+	.main__iconsListItem > img {
+		height: 2rem;
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 4rem;
+		right: 2rem;
+		display: block;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Large screens                               */
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 75em) {
+	body {
+		background-size: 88.8rem 64rem;
+		background-position-y: 10rem;
+	}
+
+	.logoBox {
+		margin: 5rem 0 0 10rem;
+		text-align: left;
+	}
+
+	.main {
+		margin-top: 14rem;
+		padding: 9rem 0 0rem 10rem;
+		text-align: left;
+		width: 75rem;
+	}
+
+	.main__content {
+		width: 70%;
+	}
+
+	.main__form {
+		width: 90%;
+	}
+
+	.main__iconsList {
+		width: 100%;
+	}
+
+	.main__iconsListItem > img {
+		height: 2.5rem;
+	}
+
+	.footer {
+		bottom: 8rem;
+		right: 0;
+	}
+}

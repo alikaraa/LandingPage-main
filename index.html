@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Frontend Mentor | Pod request access landing page</title>
+	</head>
+	<body>
+		<div class="logoBox">
+			<img src="./assets/desktop/logo.svg" alt="" />
+		</div>
+		<main class="main">
+			<header class="main__header">
+				<h1 class="main__title">
+					Publish your podcasts <span>everywhere.</span>
+				</h1>
+			</header>
+			<p class="main__content">
+				Upload your audio to Pod with a single click. We’ll then
+				distribute your podcast to Spotify, Apple Podcasts, Google
+				Podcasts, Pocket Casts and more!
+			</p>
+			<div class="main__icons">
+				<ul class="main__iconsList">
+					<li class="main__iconsListItem">
+						<img src="./assets/desktop/spotify.svg" alt="" />
+					</li>
+					<li class="main__iconsListItem">
+						<img src="./assets/desktop/apple-podcast.svg" alt="" />
+					</li>
+					<li class="main__iconsListItem">
+						<img
+							src="./assets/desktop/google-podcasts.svg"
+							alt=""
+						/>
+					</li>
+					<li class="main__iconsListItem">
+						<img src="./assets/desktop/pocket-casts.svg" alt="" />
+					</li>
+				</ul>
+			</div>
+			<form class="main__form">
+				<input
+					id="emailInput"
+					type="email"
+					name="email"
+					placeholder="Email address"
+					required
+				/>
+				<button id="submitBtn" type="submit">Request Access</button>
+			</form>
+			<p class="error">Oops! Please check your email</p>
+		</main>
+		<footer class="footer">
+			<div class="footer__dots">
+				<img src="./assets/desktop/bg-pattern-dots.svg" alt="" />
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>
